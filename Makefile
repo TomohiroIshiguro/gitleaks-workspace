@@ -28,7 +28,7 @@ detect-repo:
 
 detect-dir:
 	# 指定したフォルダ内の Git リポジトリに秘密鍵などが含まれていないかチェックする
-	# usage: $ make detect-repo DIR=(リポジトリのディレクトリ)
+	# usage: $ make detect-dir DIR=(リポジトリのディレクトリ)
 	docker run --rm --name gitleak \
 	  -v "${DIR}":/src:ro \
 	  -w /src \
