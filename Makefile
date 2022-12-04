@@ -15,14 +15,9 @@ detect:
 	  detect -v
 
 detect-repo:
-	# 任意の Git リポジトリに秘密鍵などが含まれていないかチェックする (branch の指定は任意)
-	# usage: $ make detect-repo URL=(リポジトリのURL) [BRANCH=(ブランチ)]
-	if [ -z ${BRANCH} ]; \
-	then \
-	  git clone ${URL} src; \
-	else \
-	  git clone -b ${BRANCH} ${URL} src; \
-	fi
+	# 任意の Git リポジトリに秘密鍵などが含まれていないかチェックする (リポジトリ内の branch は全走査)
+	# usage: $ make detect-repo URL=(リポジトリのURL)
+	git clone "${URL}" src
 	make detect
 	rm -Rf src
 
