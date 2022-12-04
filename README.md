@@ -15,4 +15,8 @@ https://github.com/zricethezav/gitleaks
 
 ## 作業手順
 
-Makefile を参考にしてください。 
+- $ make detect ... ./src の Git リポジトリをチェックする. あらかじめ .src/ にリポジトリをクローンしておく.
+- $ make detect-repo ... 任意のリポジトリの URL を指定して Git リポジトリをチェックする (一番お手軽)
+- $ make detect-dir ... 任意のフォルダを指定して Git リポジトリをチェックする
+
+詳しくはMakefile を参考にしてください。
