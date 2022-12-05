@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if [ ${#} -ne 1 ] || [ ! -e "${1}" ]; then
-  echo "USAGE: $ make detect-dir DIR=(リポジトリのフォルダ)"
+  echo "USAGE: $ make detect-dir DIR=(Gitリポジトリの絶対パス)"
   exit 1
 fi
 
