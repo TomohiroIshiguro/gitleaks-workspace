@@ -6,8 +6,6 @@ if [ ${#} -ne 1 ] || [ ! -e "${1}" ]; then
   exit 1
 fi
 
-echo ${1}
-
 if [ ! -e "${1}/.git" ]; then
   echo "ERROR: 指定されたフォルダは Git リポジトリではありません。"
   exit 1
